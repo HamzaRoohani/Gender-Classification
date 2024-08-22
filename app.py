@@ -31,7 +31,7 @@ def predict_image(img):
 st.title('Gender Classification')
 st.write("Upload an image to classify whether the person is male or female.")
 
-uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+uploaded_file = st.file_uploader("Choose an image:", type="jpg")
 
 if uploaded_file is not None:
     # Open and display the uploaded image
