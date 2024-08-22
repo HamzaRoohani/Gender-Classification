@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load the trained model
-model = load_model('m_f_prediction.h5')  # Update this path to your model file
+model = load_model('gender_prediction.h5')  # Update this path to your model file
 
 # Define image size for the model
 img_width, img_height = 200, 200
