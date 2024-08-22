@@ -22,7 +22,7 @@ def predict_image(img):
     # Predict the class of the image
     img_arr = preprocess_image(img)
     predictions = model.predict(img_arr)
-    if predictions[0] > 0.5:
+    if predictions[0][0] > 0.5:
         return 'male'
     else:
         return 'female'
@@ -38,7 +38,7 @@ if uploaded_file is not None:
     img = Image.open(uploaded_file)
     st.image(img, caption='Uploaded Image')
     st.write("")
-    
+
     # Make prediction
     prediction = predict_image(img)
     st.write(f'Prediction: {prediction}')
